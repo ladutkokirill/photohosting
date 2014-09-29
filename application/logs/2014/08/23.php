@@ -1,0 +1,178 @@
+<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+
+2014-08-23 12:18:58 --- CRITICAL: View_Exception [ 0 ]: The requested view /newss could not be found ~ SYSPATH\classes\Kohana\View.php [ 257 ] in D:\work\test\kohana\system\classes\Kohana\View.php:137
+2014-08-23 12:18:58 --- DEBUG: #0 D:\work\test\kohana\system\classes\Kohana\View.php(137): Kohana_View->set_filename('/newss')
+#1 D:\work\test\kohana\system\classes\Kohana\View.php(30): Kohana_View->__construct('/newss', NULL)
+#2 D:\work\test\kohana\application\classes\Controller\news.php(9): Kohana_View::factory('/newss')
+#3 D:\work\test\kohana\system\classes\Kohana\Controller.php(84): Controller_News->action_news()
+#4 [internal function]: Kohana_Controller->execute()
+#5 D:\work\test\kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#6 D:\work\test\kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 D:\work\test\kohana\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 D:\work\test\kohana\public\index.php(120): Kohana_Request->execute()
+#9 {main} in D:\work\test\kohana\system\classes\Kohana\View.php:137
+2014-08-23 12:19:39 --- CRITICAL: View_Exception [ 0 ]: The requested view /newss could not be found ~ SYSPATH\classes\Kohana\View.php [ 257 ] in D:\work\test\kohana\system\classes\Kohana\View.php:137
+2014-08-23 12:19:39 --- DEBUG: #0 D:\work\test\kohana\system\classes\Kohana\View.php(137): Kohana_View->set_filename('/newss')
+#1 D:\work\test\kohana\system\classes\Kohana\View.php(30): Kohana_View->__construct('/newss', NULL)
+#2 D:\work\test\kohana\application\classes\Controller\news.php(9): Kohana_View::factory('/newss')
+#3 D:\work\test\kohana\system\classes\Kohana\Controller.php(84): Controller_News->action_news()
+#4 [internal function]: Kohana_Controller->execute()
+#5 D:\work\test\kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#6 D:\work\test\kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 D:\work\test\kohana\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 D:\work\test\kohana\public\index.php(120): Kohana_Request->execute()
+#9 {main} in D:\work\test\kohana\system\classes\Kohana\View.php:137
+2014-08-23 12:19:39 --- CRITICAL: View_Exception [ 0 ]: The requested view /newss could not be found ~ SYSPATH\classes\Kohana\View.php [ 257 ] in D:\work\test\kohana\system\classes\Kohana\View.php:137
+2014-08-23 12:19:39 --- DEBUG: #0 D:\work\test\kohana\system\classes\Kohana\View.php(137): Kohana_View->set_filename('/newss')
+#1 D:\work\test\kohana\system\classes\Kohana\View.php(30): Kohana_View->__construct('/newss', NULL)
+#2 D:\work\test\kohana\application\classes\Controller\news.php(9): Kohana_View::factory('/newss')
+#3 D:\work\test\kohana\system\classes\Kohana\Controller.php(84): Controller_News->action_news()
+#4 [internal function]: Kohana_Controller->execute()
+#5 D:\work\test\kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#6 D:\work\test\kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 D:\work\test\kohana\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 D:\work\test\kohana\public\index.php(120): Kohana_Request->execute()
+#9 {main} in D:\work\test\kohana\system\classes\Kohana\View.php:137
+2014-08-23 12:19:40 --- CRITICAL: View_Exception [ 0 ]: The requested view /newss could not be found ~ SYSPATH\classes\Kohana\View.php [ 257 ] in D:\work\test\kohana\system\classes\Kohana\View.php:137
+2014-08-23 12:19:40 --- DEBUG: #0 D:\work\test\kohana\system\classes\Kohana\View.php(137): Kohana_View->set_filename('/newss')
+#1 D:\work\test\kohana\system\classes\Kohana\View.php(30): Kohana_View->__construct('/newss', NULL)
+#2 D:\work\test\kohana\application\classes\Controller\news.php(9): Kohana_View::factory('/newss')
+#3 D:\work\test\kohana\system\classes\Kohana\Controller.php(84): Controller_News->action_news()
+#4 [internal function]: Kohana_Controller->execute()
+#5 D:\work\test\kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#6 D:\work\test\kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 D:\work\test\kohana\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 D:\work\test\kohana\public\index.php(120): Kohana_Request->execute()
+#9 {main} in D:\work\test\kohana\system\classes\Kohana\View.php:137
+2014-08-23 12:19:40 --- CRITICAL: View_Exception [ 0 ]: The requested view /newss could not be found ~ SYSPATH\classes\Kohana\View.php [ 257 ] in D:\work\test\kohana\system\classes\Kohana\View.php:137
+2014-08-23 12:19:40 --- DEBUG: #0 D:\work\test\kohana\system\classes\Kohana\View.php(137): Kohana_View->set_filename('/newss')
+#1 D:\work\test\kohana\system\classes\Kohana\View.php(30): Kohana_View->__construct('/newss', NULL)
+#2 D:\work\test\kohana\application\classes\Controller\news.php(9): Kohana_View::factory('/newss')
+#3 D:\work\test\kohana\system\classes\Kohana\Controller.php(84): Controller_News->action_news()
+#4 [internal function]: Kohana_Controller->execute()
+#5 D:\work\test\kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#6 D:\work\test\kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 D:\work\test\kohana\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 D:\work\test\kohana\public\index.php(120): Kohana_Request->execute()
+#9 {main} in D:\work\test\kohana\system\classes\Kohana\View.php:137
+2014-08-23 12:19:40 --- CRITICAL: View_Exception [ 0 ]: The requested view /newss could not be found ~ SYSPATH\classes\Kohana\View.php [ 257 ] in D:\work\test\kohana\system\classes\Kohana\View.php:137
+2014-08-23 12:19:40 --- DEBUG: #0 D:\work\test\kohana\system\classes\Kohana\View.php(137): Kohana_View->set_filename('/newss')
+#1 D:\work\test\kohana\system\classes\Kohana\View.php(30): Kohana_View->__construct('/newss', NULL)
+#2 D:\work\test\kohana\application\classes\Controller\news.php(9): Kohana_View::factory('/newss')
+#3 D:\work\test\kohana\system\classes\Kohana\Controller.php(84): Controller_News->action_news()
+#4 [internal function]: Kohana_Controller->execute()
+#5 D:\work\test\kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#6 D:\work\test\kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 D:\work\test\kohana\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 D:\work\test\kohana\public\index.php(120): Kohana_Request->execute()
+#9 {main} in D:\work\test\kohana\system\classes\Kohana\View.php:137
+2014-08-23 12:19:41 --- CRITICAL: View_Exception [ 0 ]: The requested view /newss could not be found ~ SYSPATH\classes\Kohana\View.php [ 257 ] in D:\work\test\kohana\system\classes\Kohana\View.php:137
+2014-08-23 12:19:41 --- DEBUG: #0 D:\work\test\kohana\system\classes\Kohana\View.php(137): Kohana_View->set_filename('/newss')
+#1 D:\work\test\kohana\system\classes\Kohana\View.php(30): Kohana_View->__construct('/newss', NULL)
+#2 D:\work\test\kohana\application\classes\Controller\news.php(9): Kohana_View::factory('/newss')
+#3 D:\work\test\kohana\system\classes\Kohana\Controller.php(84): Controller_News->action_news()
+#4 [internal function]: Kohana_Controller->execute()
+#5 D:\work\test\kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#6 D:\work\test\kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 D:\work\test\kohana\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 D:\work\test\kohana\public\index.php(120): Kohana_Request->execute()
+#9 {main} in D:\work\test\kohana\system\classes\Kohana\View.php:137
+2014-08-23 12:19:41 --- CRITICAL: View_Exception [ 0 ]: The requested view /newss could not be found ~ SYSPATH\classes\Kohana\View.php [ 257 ] in D:\work\test\kohana\system\classes\Kohana\View.php:137
+2014-08-23 12:19:41 --- DEBUG: #0 D:\work\test\kohana\system\classes\Kohana\View.php(137): Kohana_View->set_filename('/newss')
+#1 D:\work\test\kohana\system\classes\Kohana\View.php(30): Kohana_View->__construct('/newss', NULL)
+#2 D:\work\test\kohana\application\classes\Controller\news.php(9): Kohana_View::factory('/newss')
+#3 D:\work\test\kohana\system\classes\Kohana\Controller.php(84): Controller_News->action_news()
+#4 [internal function]: Kohana_Controller->execute()
+#5 D:\work\test\kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#6 D:\work\test\kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 D:\work\test\kohana\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 D:\work\test\kohana\public\index.php(120): Kohana_Request->execute()
+#9 {main} in D:\work\test\kohana\system\classes\Kohana\View.php:137
+2014-08-23 12:19:41 --- CRITICAL: View_Exception [ 0 ]: The requested view /newss could not be found ~ SYSPATH\classes\Kohana\View.php [ 257 ] in D:\work\test\kohana\system\classes\Kohana\View.php:137
+2014-08-23 12:19:41 --- DEBUG: #0 D:\work\test\kohana\system\classes\Kohana\View.php(137): Kohana_View->set_filename('/newss')
+#1 D:\work\test\kohana\system\classes\Kohana\View.php(30): Kohana_View->__construct('/newss', NULL)
+#2 D:\work\test\kohana\application\classes\Controller\news.php(9): Kohana_View::factory('/newss')
+#3 D:\work\test\kohana\system\classes\Kohana\Controller.php(84): Controller_News->action_news()
+#4 [internal function]: Kohana_Controller->execute()
+#5 D:\work\test\kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#6 D:\work\test\kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 D:\work\test\kohana\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 D:\work\test\kohana\public\index.php(120): Kohana_Request->execute()
+#9 {main} in D:\work\test\kohana\system\classes\Kohana\View.php:137
+2014-08-23 12:20:10 --- CRITICAL: View_Exception [ 0 ]: The requested view /news/newss could not be found ~ SYSPATH\classes\Kohana\View.php [ 257 ] in D:\work\test\kohana\system\classes\Kohana\View.php:137
+2014-08-23 12:20:10 --- DEBUG: #0 D:\work\test\kohana\system\classes\Kohana\View.php(137): Kohana_View->set_filename('/news/newss')
+#1 D:\work\test\kohana\system\classes\Kohana\View.php(30): Kohana_View->__construct('/news/newss', NULL)
+#2 D:\work\test\kohana\application\classes\Controller\news.php(9): Kohana_View::factory('/news/newss')
+#3 D:\work\test\kohana\system\classes\Kohana\Controller.php(84): Controller_News->action_news()
+#4 [internal function]: Kohana_Controller->execute()
+#5 D:\work\test\kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#6 D:\work\test\kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 D:\work\test\kohana\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 D:\work\test\kohana\public\index.php(120): Kohana_Request->execute()
+#9 {main} in D:\work\test\kohana\system\classes\Kohana\View.php:137
+2014-08-23 12:20:11 --- CRITICAL: View_Exception [ 0 ]: The requested view /news/newss could not be found ~ SYSPATH\classes\Kohana\View.php [ 257 ] in D:\work\test\kohana\system\classes\Kohana\View.php:137
+2014-08-23 12:20:11 --- DEBUG: #0 D:\work\test\kohana\system\classes\Kohana\View.php(137): Kohana_View->set_filename('/news/newss')
+#1 D:\work\test\kohana\system\classes\Kohana\View.php(30): Kohana_View->__construct('/news/newss', NULL)
+#2 D:\work\test\kohana\application\classes\Controller\news.php(9): Kohana_View::factory('/news/newss')
+#3 D:\work\test\kohana\system\classes\Kohana\Controller.php(84): Controller_News->action_news()
+#4 [internal function]: Kohana_Controller->execute()
+#5 D:\work\test\kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#6 D:\work\test\kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 D:\work\test\kohana\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 D:\work\test\kohana\public\index.php(120): Kohana_Request->execute()
+#9 {main} in D:\work\test\kohana\system\classes\Kohana\View.php:137
+2014-08-23 12:20:11 --- CRITICAL: View_Exception [ 0 ]: The requested view /news/newss could not be found ~ SYSPATH\classes\Kohana\View.php [ 257 ] in D:\work\test\kohana\system\classes\Kohana\View.php:137
+2014-08-23 12:20:11 --- DEBUG: #0 D:\work\test\kohana\system\classes\Kohana\View.php(137): Kohana_View->set_filename('/news/newss')
+#1 D:\work\test\kohana\system\classes\Kohana\View.php(30): Kohana_View->__construct('/news/newss', NULL)
+#2 D:\work\test\kohana\application\classes\Controller\news.php(9): Kohana_View::factory('/news/newss')
+#3 D:\work\test\kohana\system\classes\Kohana\Controller.php(84): Controller_News->action_news()
+#4 [internal function]: Kohana_Controller->execute()
+#5 D:\work\test\kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#6 D:\work\test\kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 D:\work\test\kohana\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 D:\work\test\kohana\public\index.php(120): Kohana_Request->execute()
+#9 {main} in D:\work\test\kohana\system\classes\Kohana\View.php:137
+2014-08-23 12:20:11 --- CRITICAL: View_Exception [ 0 ]: The requested view /news/newss could not be found ~ SYSPATH\classes\Kohana\View.php [ 257 ] in D:\work\test\kohana\system\classes\Kohana\View.php:137
+2014-08-23 12:20:11 --- DEBUG: #0 D:\work\test\kohana\system\classes\Kohana\View.php(137): Kohana_View->set_filename('/news/newss')
+#1 D:\work\test\kohana\system\classes\Kohana\View.php(30): Kohana_View->__construct('/news/newss', NULL)
+#2 D:\work\test\kohana\application\classes\Controller\news.php(9): Kohana_View::factory('/news/newss')
+#3 D:\work\test\kohana\system\classes\Kohana\Controller.php(84): Controller_News->action_news()
+#4 [internal function]: Kohana_Controller->execute()
+#5 D:\work\test\kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#6 D:\work\test\kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 D:\work\test\kohana\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 D:\work\test\kohana\public\index.php(120): Kohana_Request->execute()
+#9 {main} in D:\work\test\kohana\system\classes\Kohana\View.php:137
+2014-08-23 12:20:11 --- CRITICAL: View_Exception [ 0 ]: The requested view /news/newss could not be found ~ SYSPATH\classes\Kohana\View.php [ 257 ] in D:\work\test\kohana\system\classes\Kohana\View.php:137
+2014-08-23 12:20:11 --- DEBUG: #0 D:\work\test\kohana\system\classes\Kohana\View.php(137): Kohana_View->set_filename('/news/newss')
+#1 D:\work\test\kohana\system\classes\Kohana\View.php(30): Kohana_View->__construct('/news/newss', NULL)
+#2 D:\work\test\kohana\application\classes\Controller\news.php(9): Kohana_View::factory('/news/newss')
+#3 D:\work\test\kohana\system\classes\Kohana\Controller.php(84): Controller_News->action_news()
+#4 [internal function]: Kohana_Controller->execute()
+#5 D:\work\test\kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#6 D:\work\test\kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 D:\work\test\kohana\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 D:\work\test\kohana\public\index.php(120): Kohana_Request->execute()
+#9 {main} in D:\work\test\kohana\system\classes\Kohana\View.php:137
+2014-08-23 12:20:13 --- CRITICAL: View_Exception [ 0 ]: The requested view /news/newss could not be found ~ SYSPATH\classes\Kohana\View.php [ 257 ] in D:\work\test\kohana\system\classes\Kohana\View.php:137
+2014-08-23 12:20:13 --- DEBUG: #0 D:\work\test\kohana\system\classes\Kohana\View.php(137): Kohana_View->set_filename('/news/newss')
+#1 D:\work\test\kohana\system\classes\Kohana\View.php(30): Kohana_View->__construct('/news/newss', NULL)
+#2 D:\work\test\kohana\application\classes\Controller\news.php(9): Kohana_View::factory('/news/newss')
+#3 D:\work\test\kohana\system\classes\Kohana\Controller.php(84): Controller_News->action_news()
+#4 [internal function]: Kohana_Controller->execute()
+#5 D:\work\test\kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#6 D:\work\test\kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 D:\work\test\kohana\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 D:\work\test\kohana\public\index.php(120): Kohana_Request->execute()
+#9 {main} in D:\work\test\kohana\system\classes\Kohana\View.php:137
+2014-08-23 12:20:13 --- CRITICAL: View_Exception [ 0 ]: The requested view /news/newss could not be found ~ SYSPATH\classes\Kohana\View.php [ 257 ] in D:\work\test\kohana\system\classes\Kohana\View.php:137
+2014-08-23 12:20:13 --- DEBUG: #0 D:\work\test\kohana\system\classes\Kohana\View.php(137): Kohana_View->set_filename('/news/newss')
+#1 D:\work\test\kohana\system\classes\Kohana\View.php(30): Kohana_View->__construct('/news/newss', NULL)
+#2 D:\work\test\kohana\application\classes\Controller\news.php(9): Kohana_View::factory('/news/newss')
+#3 D:\work\test\kohana\system\classes\Kohana\Controller.php(84): Controller_News->action_news()
+#4 [internal function]: Kohana_Controller->execute()
+#5 D:\work\test\kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_News))
+#6 D:\work\test\kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 D:\work\test\kohana\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 D:\work\test\kohana\public\index.php(120): Kohana_Request->execute()
+#9 {main} in D:\work\test\kohana\system\classes\Kohana\View.php:137

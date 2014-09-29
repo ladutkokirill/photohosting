@@ -1,0 +1,45 @@
+<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+
+2014-07-08 16:03:47 --- CRITICAL: Database_Exception [ 1146 ]: Table 'photohosting.articles' doesn't exist [ SELECT * FROM articles ] ~ MODPATH\database\classes\Kohana\Database\MySQL.php [ 194 ] in D:\work\test\kohana\modules\database\classes\Kohana\Database\Query.php:251
+2014-07-08 16:03:47 --- DEBUG: #0 D:\work\test\kohana\modules\database\classes\Kohana\Database\Query.php(251): Kohana_Database_MySQL->query(1, 'SELECT * FROM a...', false, Array)
+#1 D:\work\test\kohana\application\classes\Model\article.php(16): Kohana_Database_Query->execute()
+#2 D:\work\test\kohana\application\classes\Controller\picture.php(15): Model_Article->get_all()
+#3 D:\work\test\kohana\system\classes\Kohana\Controller.php(84): Controller_Picture->action_index()
+#4 [internal function]: Kohana_Controller->execute()
+#5 D:\work\test\kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Picture))
+#6 D:\work\test\kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 D:\work\test\kohana\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 D:\work\test\kohana\index.php(118): Kohana_Request->execute()
+#9 {main} in D:\work\test\kohana\modules\database\classes\Kohana\Database\Query.php:251
+2014-07-08 16:17:20 --- CRITICAL: ErrorException [ 8 ]: Undefined variable: articles ~ APPPATH\views\picture\loadkomp.php [ 6 ] in D:\work\test\kohana\application\views\picture\loadkomp.php:6
+2014-07-08 16:17:20 --- DEBUG: #0 D:\work\test\kohana\application\views\picture\loadkomp.php(6): Kohana_Core::error_handler(8, 'Undefined varia...', 'D:\work\test\ko...', 6, Array)
+#1 D:\work\test\kohana\system\classes\Kohana\View.php(61): include('D:\work\test\ko...')
+#2 D:\work\test\kohana\system\classes\Kohana\View.php(348): Kohana_View::capture('D:\work\test\ko...', Array)
+#3 D:\work\test\kohana\system\classes\Kohana\View.php(228): Kohana_View->render()
+#4 D:\work\test\kohana\application\views\main.php(34): Kohana_View->__toString()
+#5 D:\work\test\kohana\system\classes\Kohana\View.php(61): include('D:\work\test\ko...')
+#6 D:\work\test\kohana\system\classes\Kohana\View.php(348): Kohana_View::capture('D:\work\test\ko...', Array)
+#7 D:\work\test\kohana\system\classes\Kohana\Controller\Template.php(44): Kohana_View->render()
+#8 D:\work\test\kohana\system\classes\Kohana\Controller.php(87): Kohana_Controller_Template->after()
+#9 [internal function]: Kohana_Controller->execute()
+#10 D:\work\test\kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Picture))
+#11 D:\work\test\kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#12 D:\work\test\kohana\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#13 D:\work\test\kohana\index.php(118): Kohana_Request->execute()
+#14 {main} in D:\work\test\kohana\application\views\picture\loadkomp.php:6
+2014-07-08 16:17:25 --- CRITICAL: ErrorException [ 8 ]: Undefined variable: articles ~ APPPATH\views\picture\loadkomp.php [ 6 ] in D:\work\test\kohana\application\views\picture\loadkomp.php:6
+2014-07-08 16:17:25 --- DEBUG: #0 D:\work\test\kohana\application\views\picture\loadkomp.php(6): Kohana_Core::error_handler(8, 'Undefined varia...', 'D:\work\test\ko...', 6, Array)
+#1 D:\work\test\kohana\system\classes\Kohana\View.php(61): include('D:\work\test\ko...')
+#2 D:\work\test\kohana\system\classes\Kohana\View.php(348): Kohana_View::capture('D:\work\test\ko...', Array)
+#3 D:\work\test\kohana\system\classes\Kohana\View.php(228): Kohana_View->render()
+#4 D:\work\test\kohana\application\views\main.php(34): Kohana_View->__toString()
+#5 D:\work\test\kohana\system\classes\Kohana\View.php(61): include('D:\work\test\ko...')
+#6 D:\work\test\kohana\system\classes\Kohana\View.php(348): Kohana_View::capture('D:\work\test\ko...', Array)
+#7 D:\work\test\kohana\system\classes\Kohana\Controller\Template.php(44): Kohana_View->render()
+#8 D:\work\test\kohana\system\classes\Kohana\Controller.php(87): Kohana_Controller_Template->after()
+#9 [internal function]: Kohana_Controller->execute()
+#10 D:\work\test\kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Picture))
+#11 D:\work\test\kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#12 D:\work\test\kohana\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#13 D:\work\test\kohana\index.php(118): Kohana_Request->execute()
+#14 {main} in D:\work\test\kohana\application\views\picture\loadkomp.php:6

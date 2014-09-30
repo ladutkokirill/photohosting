@@ -67,10 +67,12 @@ class Controller_Picture extends Controller_Common
         $photo = ORM::factory('photo');   //создание пустого объекта
         $content = View::factory('/picture/edit', array('photos' => $photo->find_all()));  //указываем на вьюшку и вызываем метод к объекту
         $this->template->content = $content;
+        
     }
 
     public function action_editimage()
     {
+         
 
         $id = $this->request->param('id');
         $photo = ORM::factory('photo', $id);
@@ -110,7 +112,7 @@ class Controller_Picture extends Controller_Common
 
 
         $photo = ORM::factory('photo');   //создание пустого объекта без указания id
-        $content = View::factory('/picture/look', array('photos' => $photo->find_all()));  //указываем на вьюшку
+        $content = View::factory('/picture/look', array('photos' => $photo->order_by('upload_date','DESC')->find_all()));  //указываем на вьюшку
 
         $this->template->content = $content;
     }

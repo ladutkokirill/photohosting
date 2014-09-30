@@ -14,6 +14,7 @@ class Model_Photo extends ORM
         $this->rating++;
 //            
     }
+    
 
     public function editImageWidth($id)
     {

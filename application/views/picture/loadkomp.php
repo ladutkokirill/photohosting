@@ -45,7 +45,7 @@
       
   
   </div>
-  <input type="submit" name="submit" value="Загрузить" /><br>
+    <input type="submit" name="submit" value="Загрузить" /><br>
 </form>
 <h3>"Разрешенные форматы:<br>
 

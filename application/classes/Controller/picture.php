@@ -2,16 +2,19 @@
 
 defined('SYSPATH') or die('No direct script access.');
 
-class Controller_Picture extends Controller_Common {
+class Controller_Picture extends Controller_Common
+{
 
     // Cтраница главная
-    public function action_index() {
+    public function action_index()
+    {
         $content = View::factory('/picture/show');
         $this->template->content = $content;
     }
 
-    // Страница ТОП
-    public function action_top() {
+     //Страница ТОП
+    public function action_top()
+    {
 
         $photo = ORM::factory('photo');
 
@@ -21,27 +24,32 @@ class Controller_Picture extends Controller_Common {
 
         $this->template->content = $content;
     }
+   
 
-    public function action_topbytoday() {
+    public function action_topbytoday()
+    {
         $photo = ORM::factory('photo');
         $content = View::factory('/picture/topbytoday', array('photos' => $photo->countByCreateToday()));
         $this->template->content = $content;
     }
 
-    public function action_topbyweek() {
+    public function action_topbyweek()
+    {
         $photo = ORM::factory('photo');
         $content = View::factory('/picture/topbyweek', array('photos' => $photo->countByCreateWeek()));
         $this->template->content = $content;
     }
 
-    public function action_topbyalltime() {
+    public function action_topbyalltime()
+    {
         $photo = ORM::factory('photo');
         $content = View::factory('/picture/topbyalltime', array('photos' => $photo->topImage()));
         $this->template->content = $content;
     }
 
     // Cтраница добавления 
-    public function action_add() {
+    public function action_add()
+    {
 
 
 
@@ -54,13 +62,15 @@ class Controller_Picture extends Controller_Common {
     }
 
     // Страница редактирования фотографий
-    public function action_edit() {
+    public function action_edit()
+    {
         $photo = ORM::factory('photo');   //создание пустого объекта
         $content = View::factory('/picture/edit', array('photos' => $photo->find_all()));  //указываем на вьюшку и вызываем метод к объекту
         $this->template->content = $content;
     }
 
-    public function action_editimage() {
+    public function action_editimage()
+    {
 
         $id = $this->request->param('id');
         $photo = ORM::factory('photo', $id);
@@ -70,14 +80,16 @@ class Controller_Picture extends Controller_Common {
                     'ip' => $photo->ipuser,
                     'view' => $photo->rating
         ));
-        if (isset($_POST['submit'])) {
+        if (isset($_POST['submit']))
+        {
             $photo->editImageWidth($id);
             $photo->editImageHeigth($id);
 
 
             // echo '<pre>', print_r($_POST), '</pre>';
 
-            if (isset($_POST['turn'])) {
+            if (isset($_POST['turn']))
+            {
                 $filename = DOCROOT . '/public/' . $photo->way;
                 $source = imagecreatefromjpeg($filename);
                 $degrees = ($_POST["turn"]);
@@ -93,7 +105,8 @@ class Controller_Picture extends Controller_Common {
     }
 
     // Страница просмотра уже загруженных фотографий
-    public function action_look() {
+    public function action_look()
+    {
 
 
         $photo = ORM::factory('photo');   //создание пустого объекта без указания id
@@ -102,7 +115,8 @@ class Controller_Picture extends Controller_Common {
         $this->template->content = $content;
     }
 
-    public function action_looking() {
+    public function action_looking()
+    {
         $id = $this->request->param('id');
         $photo = ORM::factory('photo', $id);
         $content = View::factory('/picture/looking', array(
@@ -119,29 +133,34 @@ class Controller_Picture extends Controller_Common {
 
     // Загрузка фото с компьютера
 
-    public function action_loadkomp() {
+    public function action_loadkomp()
+    {
         $content = View::factory('/picture/loadkomp');
         $this->template->content = $content;
         $photo = ORM::factory('photo');
-        if (isset($_POST['submit'])) {
+        if (isset($_POST['submit']))
+        {
 
-            if (isset($_FILES)) {
+            if (isset($_FILES))
+            {
 
 
                 $count = count($_FILES['photos']['tmp_name']);
-                for ($i = 0; $i < $count; $i++) {
+                for ($i = 0; $i < $count; $i++)
+                {
 
 
-//                    if (is_uploaded_file($_FILES["photos"]["tmp_name"][$i])) {
-//
-//                        $FILES_URL = $_FILES["photos"]["tmp_name"][$i];
-//                        $original_url = DOCROOT . '/public/picture/' . $_FILES["photos"]["name"][$i];
-//                        $thumb_url = DOCROOT . '/public/picture/thumbs/' . $_FILES["photos"]["name"][$i];
-//                        $preview = '/picture/thumbs/' . $_FILES["photos"]["name"][$i];
-                    include'/entity/path_creation.php';
+                    if (is_uploaded_file($_FILES["photos"]["tmp_name"][$i]))
+                    {
+
+                        $FILES_URL = $_FILES["photos"]["tmp_name"][$i];
+                        $original_url = DOCROOT . '/public/picture/' . $_FILES["photos"]["name"][$i];
+                        $thumb_url = DOCROOT . '/public/picture/thumbs/' . $_FILES["photos"]["name"][$i];
+                        $preview = '/picture/thumbs/' . $_FILES["photos"]["name"][$i];
 
 //echo '<pre>', print_r($_POST), '</pre>';
-                        if (move_uploaded_file($FILES_URL, $original_url)) {
+                        if (move_uploaded_file($FILES_URL, $original_url))
+                        {
 
                             copy($original_url, $thumb_url);
 
@@ -152,10 +171,10 @@ class Controller_Picture extends Controller_Common {
                             $photo->rating = 0;
                             $photo->heigth = ($_POST["height"]);
                             $photo->width = ($_POST["width"]);
-                            $photo->upload_date = date('H:i:s d.m.Y');
-                            
+                            $photo->upload_date = date("Y-m-d H:i:s ");
 
-                            //$w=($_POST["reswidth"]);
+
+
                             if (!isset($q))
                                 $q = 100;
                             $image_data = getimagesize($original_url);
@@ -163,7 +182,8 @@ class Controller_Picture extends Controller_Common {
                             $h_src = $image_data['1'];
 
                             $w = ($_POST["reswidth"]);
-                            if ($w_src != $w) {
+                            if ($w_src != $w)
+                            {
 
                                 $ratio = $w_src / $w;
                                 $w_dest = round($w_src / $ratio);
@@ -179,13 +199,17 @@ class Controller_Picture extends Controller_Common {
                                 $file = $thumb_url;
 
                                 //определяем тип файла
-                                if ($file_type[2] == 1) {
+                                if ($file_type[2] == 1)
+                                {
                                     $image = imagecreatefromgif($file);
-                                } elseif ($file_type[2] == 2) {
+                                } elseif ($file_type[2] == 2)
+                                {
                                     $image = imagecreatefromjpeg($file);
-                                } elseif ($file_type[2] == 3) {
+                                } elseif ($file_type[2] == 3)
+                                {
                                     $image = imagecreatefrompng($file);
-                                } else {
+                                } else
+                                {
                                     $image = imagecreatefromjpg($file);
                                 }
 
@@ -193,20 +217,26 @@ class Controller_Picture extends Controller_Common {
 
                                 imagecopyresized($image2, $image, 0, 0, 0, 0, $width, $height, $file_type[0], $file_type[1]);
 
-                                if ($file_type[2] == 1) {
+                                if ($file_type[2] == 1)
+                                {
                                     imagegif($image2, $file);
-                                } elseif ($file_type[2] == 2) {
+                                } elseif ($file_type[2] == 2)
+                                {
                                     imagejpeg($image2, $file);
-                                } elseif ($file_type[2] == 3) {
+                                } elseif ($file_type[2] == 3)
+                                {
                                     imagepng($image2, $file);
-                                } else {
+                                } else
+                                {
                                     imagejpeg($image2, $file);
                                 }
                                 //   print_r($_FILES);
-                                if (isset($_POST['submit'])) {
+                                if (isset($_POST['submit']))
+                                {
 
                                     $selected_radio = $_POST['pre'];
-                                    if ($selected_radio === 'nothing') {
+                                    if ($selected_radio === 'nothing')
+                                    {
 
 
                                         $file_type = getimagesize($thumb_url);
@@ -215,13 +245,17 @@ class Controller_Picture extends Controller_Common {
                                         $width = $w_dest;
                                         $height = $h_dest;
                                         $file = $thumb_url;
-                                        if ($file_type[2] == 1) {
+                                        if ($file_type[2] == 1)
+                                        {
                                             $image = imagecreatefromgif($file);
-                                        } elseif ($file_type[2] == 2) {
+                                        } elseif ($file_type[2] == 2)
+                                        {
                                             $image = imagecreatefromjpeg($file);
-                                        } elseif ($file_type[2] == 3) {
+                                        } elseif ($file_type[2] == 3)
+                                        {
                                             $image = imagecreatefrompng($file);
-                                        } else {
+                                        } else
+                                        {
                                             $image = imagecreatefromjpg($file);
                                         }
 
@@ -229,13 +263,17 @@ class Controller_Picture extends Controller_Common {
 
                                         imagecopyresized($image2, $image, 0, 0, 0, 0, $width, $height, $file_type[0], $file_type[1]);
 
-                                        if ($file_type[2] == 1) {
+                                        if ($file_type[2] == 1)
+                                        {
                                             imagegif($image2, $file);
-                                        } elseif ($file_type[2] == 2) {
+                                        } elseif ($file_type[2] == 2)
+                                        {
                                             imagejpeg($image2, $file);
-                                        } elseif ($file_type[2] == 3) {
+                                        } elseif ($file_type[2] == 3)
+                                        {
                                             imagepng($image2, $file);
-                                        } else {
+                                        } else
+                                        {
                                             imagejpeg($image2, $file);
                                         }
                                         $photo->way_preview = $preview;
@@ -243,7 +281,8 @@ class Controller_Picture extends Controller_Common {
                                     }
 
                                     $selected_radio = $_POST['pre'];
-                                    if ($selected_radio === 'size') {
+                                    if ($selected_radio === 'size')
+                                    {
 
 
                                         $file_type = getimagesize($thumb_url);
@@ -272,7 +311,8 @@ class Controller_Picture extends Controller_Common {
 
 
                                     //print_r($_POST);
-                                    else if ($selected_radio === 'text') {
+                                    else if ($selected_radio === 'text')
+                                    {
                                         $color = ($_POST["color"]);
                                         $colors = explode(",", $color);
 
@@ -292,28 +332,32 @@ class Controller_Picture extends Controller_Common {
                                     }
                                 }
                             }
-                        } else {
-                            echo("Ошибка загрузки файла");
                         }
+                    }
+                    if (isset($_POST['submit']))
+                    {
+                        $this->redirect('/picture/look');
+                    } else
+                    {
+                        echo("Ошибка загрузки файла");
                     }
                 }
             }
         }
+    }
 
-
-
-        //die;
-    
-
+    //die;
     //var_dump($_POST); die;
     // Страница загрузки фото по ссылке
-    public function action_loadlink() {
+    public function action_loadlink()
+    {
         $content = View::factory('/picture/loadlink');
         $this->template->content = $content;
 
 
 
-        if (isset($_POST['submit'])) {
+        if (isset($_POST['submit']))
+        {
             $photo = ORM::factory('photo');
 
             $ch = curl_init($_POST['way']);
@@ -332,14 +376,14 @@ class Controller_Picture extends Controller_Common {
             $thumb_url = DOCROOT . '/public/picture/thumbs/' . substr($tmpfname, strrpos($tmpfname, DIRECTORY_SEPARATOR) + 1, strlen($tmpfname));
             $url_photo = DOCROOT . '/public/picture/' . substr($tmpfname, strrpos($tmpfname, DIRECTORY_SEPARATOR) + 1, strlen($tmpfname));
             copy($url_photo, $thumb_url);
-                        $photo->way = '/picture/' . substr($tmpfname, strrpos($tmpfname, DIRECTORY_SEPARATOR) + 1, strlen($tmpfname));
-                        $photo->ipuser = Request::$client_ip;
-                        $photo->picturename = $_POST["picturename"];
-                        $photo->rating = 0;
-                        $photo->heigth = ($_POST["height"]);
-                        $photo->width = ($_POST["width"]);
-                        $photo->way_preview = $preview;
-                        $photo->upload_date = date('H:i:s d.m.Y');
+            $photo->way = '/picture/' . substr($tmpfname, strrpos($tmpfname, DIRECTORY_SEPARATOR) + 1, strlen($tmpfname));
+            $photo->ipuser = Request::$client_ip;
+            $photo->picturename = $_POST["picturename"];
+            $photo->rating = 0;
+            $photo->heigth = ($_POST["height"]);
+            $photo->width = ($_POST["width"]);
+            $photo->way_preview = $preview;
+            $photo->upload_date = date("Y-m-d H:i:s ");
             $image_data = getimagesize($url_photo);
 
             $w_src = $image_data['0'];
@@ -348,7 +392,8 @@ class Controller_Picture extends Controller_Common {
 //            echo "$w_src <br>";
 
             $w = ($_POST["reswidth"]);
-            if ($w_src != $w) {
+            if ($w_src != $w)
+            {
 
                 $ratio = $w_src / $w;
                 $w_dest = round($w_src / $ratio);
@@ -367,34 +412,44 @@ class Controller_Picture extends Controller_Common {
 //                echo "$width <br>";
 //                echo "$height";
 
-                if ($file_type[2] == 1) {
+                if ($file_type[2] == 1)
+                {
                     $image = imagecreatefromgif($file);
-                } elseif ($file_type[2] == 2) {
+                } elseif ($file_type[2] == 2)
+                {
                     $image = imagecreatefromjpeg($file);
-                } elseif ($file_type[2] == 3) {
+                } elseif ($file_type[2] == 3)
+                {
                     $image = imagecreatefrompng($file);
-                } else {
+                } else
+                {
                     $image = imagecreatefromjpg($file);
                 }
-               // print_r($image);
+                // print_r($image);
                 $image2 = @imagecreatetruecolor($width, $height);
 
                 imagecopyresized($image2, $image, 0, 0, 0, 0, $width, $height, $file_type[0], $file_type[1]);
 
-                if ($file_type[2] == 1) {
+                if ($file_type[2] == 1)
+                {
                     imagegif($image2, $file);
-                } elseif ($file_type[2] == 2) {
+                } elseif ($file_type[2] == 2)
+                {
                     imagejpeg($image2, $file);
-                } elseif ($file_type[2] == 3) {
+                } elseif ($file_type[2] == 3)
+                {
                     imagepng($image2, $file);
-                } else {
+                } else
+                {
                     imagejpeg($image2, $file);
                 }
 
-                if (isset($_POST['submit'])) {
+                if (isset($_POST['submit']))
+                {
 
                     $selected_radio = $_POST['pre'];
-                    if ($selected_radio === 'nothing') {
+                    if ($selected_radio === 'nothing')
+                    {
 
 
                         $file_type = getimagesize($thumb_url);
@@ -403,13 +458,17 @@ class Controller_Picture extends Controller_Common {
                         $width = $w_dest;
                         $height = $h_dest;
                         $file = $thumb_url;
-                        if ($file_type[2] == 1) {
+                        if ($file_type[2] == 1)
+                        {
                             $image = imagecreatefromgif($file);
-                        } elseif ($file_type[2] == 2) {
+                        } elseif ($file_type[2] == 2)
+                        {
                             $image = imagecreatefromjpeg($file);
-                        } elseif ($file_type[2] == 3) {
+                        } elseif ($file_type[2] == 3)
+                        {
                             $image = imagecreatefrompng($file);
-                        } else {
+                        } else
+                        {
                             $image = imagecreatefromjpg($file);
                         }
 
@@ -417,13 +476,17 @@ class Controller_Picture extends Controller_Common {
 
                         imagecopyresized($image2, $image, 0, 0, 0, 0, $width, $height, $file_type[0], $file_type[1]);
 
-                        if ($file_type[2] == 1) {
+                        if ($file_type[2] == 1)
+                        {
                             imagegif($image2, $file);
-                        } elseif ($file_type[2] == 2) {
+                        } elseif ($file_type[2] == 2)
+                        {
                             imagejpeg($image2, $file);
-                        } elseif ($file_type[2] == 3) {
+                        } elseif ($file_type[2] == 3)
+                        {
                             imagepng($image2, $file);
-                        } else {
+                        } else
+                        {
                             imagejpeg($image2, $file);
                         }
                         $photo->way_preview = $preview;
@@ -431,7 +494,8 @@ class Controller_Picture extends Controller_Common {
                     }
 
                     $selected_radio = $_POST['pre'];
-                    if ($selected_radio === 'size') {
+                    if ($selected_radio === 'size')
+                    {
 
 
                         $file_type = getimagesize($thumb_url);
@@ -453,14 +517,15 @@ class Controller_Picture extends Controller_Common {
                         imagettftext($image2, $size, 0, 10, 20, $col, $font, $text);
 
                         imagejpeg($image2, $file);
-                     //   print_r($_POST);
+                        //   print_r($_POST);
                         $photo->way_preview = $preview;
                         $photo->save();
                     }
 
 
                     //print_r($_POST);
-                    else if ($selected_radio === 'text') {
+                    else if ($selected_radio === 'text')
+                    {
                         $color = ($_POST["color"]);
                         $colors = explode(",", $color);
 
@@ -480,15 +545,15 @@ class Controller_Picture extends Controller_Common {
 
                         //$url_photo='/picture/' . substr($tmpfname, strrpos($tmpfname, DIRECTORY_SEPARATOR) + 1, strlen($tmpfname));
                         //print_r($url);
-                        
-                       // $photo->save();
+                        // $photo->save();
                     }
                 }
             }
         }
     }
 
-    public function action_putimage() {
+    public function action_putimage()
+    {
 
 
 
